@@ -12,6 +12,8 @@ import Builder.ConstructorOrco;
 import Builder.Elfo;
 import Builder.Personaje;
 import chainofresponsability.Implementar;
+import java.awt.Graphics;
+import java.awt.Rectangle;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
@@ -29,23 +31,24 @@ import javax.swing.JLabel;
 public class Vista1 extends javax.swing.JFrame implements KeyListener {
 
     ArrayList<Personaje> p = new ArrayList<>();
-
+    Graphics g;
     public static JLabel Imagen = new JLabel();
     Implementar imp = new Implementar();
     Personaje per;
-    int aux = 0;
-    public int n = 130;
+
 
     public Vista1(Personaje per) {
         initComponents();
-    
+       
+       
         panel.add(Imagen);
-        System.out.print(aux);
         per.setPanel(panel);
         this.p.add(per);
         this.p.add(per.clone());
         this.p.get(0).setHitbox(20, 0, this.p.get(1).getAncho(), this.p.get(1).getAlto());
         this.p.get(1).setHitbox(20, 200, this.p.get(1).getAncho(), this.p.get(1).getAlto());
+        
+        
         this.p.get(1).setDesplazamientoVertical(200);
         panel.add(this.p.get(0));
         panel.add(this.p.get(1));
@@ -55,7 +58,7 @@ public class Vista1 extends javax.swing.JFrame implements KeyListener {
         setFocusable(true);
         setFocusTraversalKeysEnabled(true);
     }
-
+   
     @Override
     public void keyPressed(KeyEvent e) {
 
@@ -230,7 +233,7 @@ public class Vista1 extends javax.swing.JFrame implements KeyListener {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BotonClonarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonClonarActionPerformed
-        aux++;
+
     }//GEN-LAST:event_BotonClonarActionPerformed
 
     private void BotonPoderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonPoderActionPerformed
@@ -238,7 +241,6 @@ public class Vista1 extends javax.swing.JFrame implements KeyListener {
     }//GEN-LAST:event_BotonPoderActionPerformed
 
     private void BajarVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BajarVActionPerformed
-
         imp.operacion(1, per);
     }//GEN-LAST:event_BajarVActionPerformed
 
@@ -258,12 +260,6 @@ public class Vista1 extends javax.swing.JFrame implements KeyListener {
     public javax.swing.JPanel panel;
     // End of variables declaration//GEN-END:variables
 
-    public int getN() {
-        return n;
-    }
-
-    public void setN(int n) {
-        this.n = n;
-    }
+ 
 
 }

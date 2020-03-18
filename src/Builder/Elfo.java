@@ -5,6 +5,7 @@
  */
 package Builder;
 
+import java.awt.Rectangle;
 import javax.swing.ImageIcon;
 
 /**
@@ -22,5 +23,6 @@ public class Elfo extends Personaje {
         super.saltar = new ImageIcon[6];
         super.morir = new ImageIcon[5];
         super.atacar = new ImageIcon[5];
+        super.hitbox = new Rectangle(desplazamientoHorizontal+(ancho/2)-10, desplazamientoVertical+(alto/4), (ancho/2)-40, (alto/2)+25); 
     }
 }

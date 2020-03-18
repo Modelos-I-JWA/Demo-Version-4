@@ -9,6 +9,7 @@ import Builder.Builder;
 import Builder.ConstructorElfo;
 import Builder.ConstructorHumano;
 import Builder.ConstructorOrco;
+import java.awt.Graphics;
 
 /**
  *

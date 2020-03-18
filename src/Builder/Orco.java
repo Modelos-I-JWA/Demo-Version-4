@@ -5,6 +5,7 @@
  */
 package Builder;
 
+import java.awt.Rectangle;
 import javax.swing.ImageIcon;
 
 /**
@@ -22,5 +23,6 @@ public class Orco extends Personaje{
         super.saltar = new ImageIcon[5];
         super.morir = new ImageIcon[4];
         super.atacar = new ImageIcon[3];
+        super.hitbox = new Rectangle(desplazamientoHorizontal+(ancho/2)-10, desplazamientoVertical+(alto/4), (ancho/2)-40, (alto/2)+25); 
     }
 }
