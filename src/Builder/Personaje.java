@@ -260,7 +260,7 @@ public class Personaje extends JComponent implements Cloneable {
             
             switch (x) {
                 case 0:
-                    g.drawImage(derecha[numero].getImage(), 50 + desplazamientoHorizontal, 0 + desplazamientoVertical, ancho+100, alto+100, null);
+                    g.drawImage(derecha[numero].getImage(), 50 + desplazamientoHorizontal, 0 + desplazamientoVertical, ancho, alto, null);
                     break;
                 case 1:
 
